@@ -7,7 +7,7 @@ export async function GET(request: Request) {
     const section = searchParams.get('section')
     const category = searchParams.get('category')
 
-    const where: any = {
+    const where: { published: boolean; section?: string; category?: string } = {
       published: true
     }
 

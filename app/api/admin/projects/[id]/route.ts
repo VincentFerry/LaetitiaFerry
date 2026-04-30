@@ -43,16 +43,16 @@ export async function PATCH(
     const rawData = await request.json()
 
     // Préparer les données avec les bons types
-    const data: any = {
-      title: rawData.title,
-      section: rawData.section,
-      category: rawData.category,
-      videoUrl: rawData.videoUrl,
-      thumbnail: rawData.thumbnail || null,
-      year: rawData.year ? parseInt(rawData.year) : null,
-      client: rawData.client || null,
-      description: rawData.description || null,
-      order: rawData.order ? parseInt(rawData.order) : 0,
+    const data = {
+      title: rawData.title as string,
+      section: rawData.section as string,
+      category: rawData.category as string,
+      videoUrl: rawData.videoUrl as string,
+      thumbnail: (rawData.thumbnail as string) || null,
+      year: rawData.year ? parseInt(rawData.year as string) : null,
+      client: (rawData.client as string) || null,
+      description: (rawData.description as string) || null,
+      order: rawData.order ? parseInt(rawData.order as string) : 0,
       published: rawData.published === true || rawData.published === 'true',
     }
 
