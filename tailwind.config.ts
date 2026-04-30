@@ -9,8 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: "var(--color-bg)",
+        surface: "var(--color-surface)",
+        border: "var(--color-border)",
+        text: "var(--color-text)",
+        muted: "var(--color-muted)",
+        accent: "var(--color-accent)",
+        hover: "var(--color-hover)",
+      },
+      fontFamily: {
+        cormorant: ["var(--font-cormorant)", "serif"],
+        sans: ["var(--font-dm-sans)", "sans-serif"],
+        mono: ["var(--font-space-mono)", "monospace"],
+      },
+      screens: {
+        sm: "640px",
+        lg: "1024px",
+        xl: "1440px",
       },
     },
   },

@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Laetitia Ferry
 
-## Getting Started
+Site portfolio pour Laetitia Ferry - Réalisatrice / 1ère Assistante Réalisatrice
 
-First, run the development server:
+## Stack Technique
+
+- **Framework**: Next.js 14 (App Router)
+- **Langage**: TypeScript
+- **Styling**: Tailwind CSS
+- **Base de données**: SQLite via Prisma
+- **Authentification**: NextAuth.js
+- **Hébergement vidéo**: YouTube + Vimeo (embed)
+
+## Installation
+
+### 1. Cloner le projet et installer les dépendances
+
+```bash
+npm install
+```
+
+### 2. Configuration de l'environnement
+
+Copier le fichier `.env.example` vers `.env` et configurer les variables :
+
+```bash
+cp .env.example .env
+```
+
+Variables importantes à configurer :
+- `NEXTAUTH_SECRET` : Générer avec `openssl rand -base64 32`
+- `ADMIN_EMAIL` : Email de l'administrateur
+- Configuration SMTP pour le formulaire de contact
+
+### 3. Initialiser la base de données
+
+```bash
+# Générer le client Prisma
+npm run db:generate
+
+# Créer la base de données et appliquer les migrations
+npm run db:migrate
+
+# Créer un utilisateur admin (mot de passe par défaut: admin123)
+npm run db:seed
+# Ou avec un mot de passe personnalisé:
+npm run db:seed mon-mot-de-passe
+```
+
+### 4. Lancer le serveur de développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Lancer le serveur de développement
+- `npm run build` - Construire l'application pour la production
+- `npm run start` - Lancer l'application en production
+- `npm run lint` - Linter le code
+- `npm run db:generate` - Générer le client Prisma
+- `npm run db:migrate` - Créer/appliquer les migrations
+- `npm run db:studio` - Ouvrir Prisma Studio (interface graphique BDD)
+- `npm run db:seed` - Créer un utilisateur admin
 
-## Learn More
+## Structure du projet
 
-To learn more about Next.js, take a look at the following resources:
+```
+/
+├── app/                    # Routes Next.js (App Router)
+│   ├── (public)/          # Pages publiques
+│   ├── admin/             # Interface d'administration
+│   └── api/               # Routes API
+├── components/            # Composants React réutilisables
+├── lib/                   # Utilitaires et configurations
+│   ├── prisma.ts         # Client Prisma
+│   └── auth.ts           # Configuration NextAuth
+├── prisma/               # Schéma et migrations Prisma
+├── public/               # Fichiers statiques
+│   └── uploads/          # Fichiers uploadés
+├── scripts/              # Scripts utilitaires
+└── types/                # Définitions TypeScript
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Accès à l'administration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+URL: [http://localhost:3000/admin/login](http://localhost:3000/admin/login)
 
-## Deploy on Vercel
+Identifiants par défaut :
+- Email: `admin@laetitiaferr.com`
+- Mot de passe: `admin123` (à changer après la première connexion)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Modèles de données
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Project** : Projets vidéo (Réalisation / 1ère Assistante)
+- **Photo** : Photos argentiques (Couleur / N&B)
+- **Partner** : Logos partenaires
+- **SiteConfig** : Configuration du site (showreel, textes, etc.)
+- **User** : Utilisateurs admin
+
+## Déploiement
+
+Le projet peut être déployé sur Vercel ou tout autre hébergeur compatible Next.js.
+
+Pour la production :
+1. Configurer les variables d'environnement sur la plateforme
+2. Utiliser PostgreSQL au lieu de SQLite (recommandé)
+3. Configurer un service de stockage pour les uploads (S3, Cloudinary, etc.)
+
+## Documentation
+
+Voir le fichier `Claude.md` pour le cahier des charges complet du projet.
