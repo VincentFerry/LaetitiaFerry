@@ -16,17 +16,13 @@
     "seed:photos": "node scripts/seed-photos.js",
     "seed:about": "node scripts/seed-about.js",
     "seed:partners": "node scripts/seed-partners.js",
-    "export:data": "node scripts/export-data.js",
-    "import:turso": "node scripts/import-to-turso.js"
+    "export:postgres": "node scripts/export-to-postgres.js"
   },
   "dependencies": {
-    "@libsql/client": "^0.17.3",
-    "@prisma/adapter-libsql": "^7.8.0",
     "@prisma/client": "^5.19.1",
     "bcryptjs": "^3.0.3",
     "better-sqlite3": "^12.9.0",
     "dotenv": "^17.4.2",
-    "dotenv-cli": "^11.0.0",
     "next": "14.2.35",
     "next-auth": "^4.24.14",
     "prisma": "^5.19.1",
