@@ -153,7 +153,7 @@ export default function EditPartnerPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="order" className="block text-sm label-text mb-2">
-                  Ordre d'affichage
+                  Ordre d&apos;affichage
                 </label>
                 <input
                   type="number"

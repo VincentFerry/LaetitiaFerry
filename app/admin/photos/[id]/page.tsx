@@ -132,7 +132,7 @@ export default function EditPhotoPage() {
 
             <div>
               <label htmlFor="url" className="block text-sm label-text mb-2">
-                URL de l'image *
+                URL de l&apos;image *
               </label>
               <input
                 type="url"
@@ -167,7 +167,7 @@ export default function EditPhotoPage() {
 
               <div>
                 <label htmlFor="order" className="block text-sm label-text mb-2">
-                  Ordre d'affichage
+                  Ordre d&apos;affichage
                 </label>
                 <input
                   type="number"

@@ -102,7 +102,7 @@ export default function AdminAboutPage() {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-cormorant font-light mb-2">Gestion "Qui suis-je"</h1>
+            <h1 className="text-3xl font-cormorant font-light mb-2">Gestion &quot;Qui suis-je&quot;</h1>
             <p className="text-muted text-sm">Modifier le contenu de la page À propos</p>
           </div>
           <Link href="/admin" className="btn-secondary">

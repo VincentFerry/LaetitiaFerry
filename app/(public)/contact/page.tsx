@@ -54,7 +54,7 @@ export default function ContactPage() {
           Contact
         </h1>
         <p className="text-center text-muted mb-16 fade-in" style={{ animationDelay: '100ms' }}>
-          Une question ? Un projet ? N'hésitez pas à me contacter.
+          Une question ? Un projet ? N&apos;hésitez pas à me contacter.
         </p>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -202,7 +202,7 @@ export default function ContactPage() {
               <div className="p-6 bg-surface border border-border rounded">
                 <h3 className="text-sm label-text mb-2">Disponibilité</h3>
                 <p className="text-muted text-sm">
-                  Actuellement disponible pour de nouveaux projets. N'hésitez pas à me contacter pour discuter de vos besoins.
+                  Actuellement disponible pour de nouveaux projets. N&apos;hésitez pas à me contacter pour discuter de vos besoins.
                 </p>
               </div>
             </div>
