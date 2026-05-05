@@ -41,13 +41,14 @@ export async function POST(request: Request) {
         filename: data.filename,
         url: data.url,
         category: data.category,
-        order: data.order || 0,
+        order: parseInt(data.order) || 0,
       }
     })
 
     return NextResponse.json({ photo })
   } catch (error) {
     console.error('Error creating photo:', error)
-    return NextResponse.json({ error: 'Failed to create photo' }, { status: 500 })
+    const message = error instanceof Error ? error.message : 'Unknown error'
+    return NextResponse.json({ error: 'Failed to create photo', details: message }, { status: 500 })
   }
 }

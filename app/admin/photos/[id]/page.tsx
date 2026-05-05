@@ -72,11 +72,12 @@ export default function EditPhotoPage() {
       if (response.ok) {
         router.push('/admin/photos')
       } else {
-        alert('Erreur lors de la sauvegarde')
+        const errData = await response.json()
+        alert(`Erreur: ${errData.details || errData.error}`)
       }
     } catch (error) {
       console.error('Error saving photo:', error)
-      alert('Erreur lors de la sauvegarde')
+      alert(`Erreur: ${error instanceof Error ? error.message : 'Inconnue'}`)
     } finally {
       setIsSaving(false)
     }
