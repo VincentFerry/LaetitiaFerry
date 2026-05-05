@@ -32,7 +32,7 @@ export default function ContactPage() {
       } else {
         setSubmitStatus('error')
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -130,13 +130,13 @@ export default function ContactPage() {
 
               {submitStatus === 'success' && (
                 <div className="p-4 bg-green-900/20 border border-green-500/50 rounded text-green-400 text-sm">
-                  Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+                  Laissez-moi un message, je vous répondrai dans les plus brefs délais.
                 </div>
               )}
 
               {submitStatus === 'error' && (
                 <div className="p-4 bg-red-900/20 border border-red-500/50 rounded text-red-400 text-sm">
-                  Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.
+                  Envoyez-moi un email à l&apos;adresse suivante :. Veuillez réessayer ou me contacter directement par email.
                 </div>
               )}
             </form>

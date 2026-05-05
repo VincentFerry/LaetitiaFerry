@@ -162,7 +162,7 @@ export default function AdminAboutPage() {
           {/* Crédits */}
           <div className="bg-surface border border-border rounded-lg p-6">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-cormorant">Crédits notables</h3>
+                <h3 className="text-lg font-cormorant">Crédits notables</h3>
               <button
                 type="button"
                 onClick={addCredit}

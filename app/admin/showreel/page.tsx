@@ -68,7 +68,7 @@ export default function AdminShowreelPage() {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-cormorant font-light mb-2">Gestion du Showreel</h1>
-            <p className="text-muted text-sm">Modifier la vidéo showreel de la page d'accueil</p>
+            <p className="text-muted text-sm">Modifier la vidéo showreel de la page d&apos;accueil</p>
           </div>
           <Link href="/admin" className="btn-secondary">
             ← Retour
@@ -132,7 +132,7 @@ export default function AdminShowreelPage() {
         <div className="mt-8 p-4 bg-surface border border-border rounded-lg">
           <h3 className="text-sm label-text mb-2">💡 Astuce</h3>
           <p className="text-sm text-muted">
-            Pour voir les modifications, visitez la page d'accueil : 
+            Pour voir les modifications, visitez la page d&apos;accueil : 
             <a href="/" target="_blank" className="text-accent hover:underline ml-1">
               http://localhost:3000
             </a>

@@ -16,7 +16,6 @@ interface Project {
 }
 
 export default function AdminProjectsPage() {
-  const router = useRouter()
   const [projects, setProjects] = useState<Project[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [filter, setFilter] = useState<'all' | 'realisation' | 'assistante'>('all')

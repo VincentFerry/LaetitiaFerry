@@ -8,7 +8,7 @@ interface HeroVideoProps {
 }
 
 export default function HeroVideo({ url, className = '' }: HeroVideoProps) {
-  const { embedUrl, provider } = getVideoEmbed(url)
+  const { embedUrl } = getVideoEmbed(url)
 
   return (
     <div className={`absolute inset-0 overflow-hidden ${className}`}>

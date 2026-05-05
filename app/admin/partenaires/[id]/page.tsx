@@ -29,6 +29,7 @@ export default function EditPartnerPage() {
     if (!isNew) {
       fetchPartner()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params.id])
 
   const fetchPartner = async () => {
@@ -183,6 +184,7 @@ export default function EditPartnerPage() {
               <div>
                 <p className="text-sm label-text mb-2">Aperçu du logo :</p>
                 <div className="relative w-full aspect-video max-w-md bg-bg border border-border rounded p-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={formData.logoUrl}
                     alt={formData.name}

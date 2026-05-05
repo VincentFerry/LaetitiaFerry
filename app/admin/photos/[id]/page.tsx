@@ -29,6 +29,7 @@ export default function EditPhotoPage() {
     if (!isNew) {
       fetchPhoto()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params.id])
 
   const fetchPhoto = async () => {
@@ -184,6 +185,7 @@ export default function EditPhotoPage() {
               <div>
                 <p className="text-sm label-text mb-2">Aperçu :</p>
                 <div className="relative w-full aspect-square max-w-md bg-bg border border-border rounded overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={formData.url}
                     alt={formData.filename}

@@ -38,10 +38,10 @@ export default function PartnersPage() {
       <div className="max-w-7xl mx-auto">
         {/* Titre de section */}
         <h1 className="text-5xl md:text-6xl font-cormorant font-light text-center mb-8 fade-in">
-          Ils m'ont fait confiance
+          Ils m&apos;ont fait confiance
         </h1>
         <p className="text-center text-muted mb-16 fade-in" style={{ animationDelay: '100ms' }}>
-          Maisons de production, chaînes et clients avec qui j'ai eu le plaisir de collaborer
+          tout au long de ma carrière. Voici quelques-uns d&apos;entre eux. J&apos;ai eu le privilège de collaborer avec des partenaires prestigieux.
         </p>
 
         {/* Grille de logos */}

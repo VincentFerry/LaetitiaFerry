@@ -41,6 +41,7 @@ export default function EditProjectPage() {
     if (!isNew) {
       fetchProject()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params.id])
 
   const fetchProject = async () => {
@@ -221,10 +222,9 @@ export default function EditProjectPage() {
                 placeholder="https://..."
                 className="w-full px-4 py-3 bg-bg border border-border rounded focus:outline-none focus:border-accent transition-colors"
               />
-              <p className="text-xs text-muted mt-1">Laissez vide pour utiliser la miniature YouTube/Vimeo</p>
+              <p className="text-xs text-muted mt-1">URL YouTube (youtube.com/watch?v=...) ou Vimeo (vimeo.com/...)</p>
             </div>
 
-            {/* Année et Client */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="year" className="block text-sm label-text mb-2">
